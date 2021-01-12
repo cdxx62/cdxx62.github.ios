@@ -144,6 +144,537 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Es6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/12/Es6/">Es6</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/12/Es6/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="let-变量"><a href="#let-变量" class="headerlink" title="let 变量"></a>let 变量</h2><h3 id="let-基础"><a href="#let-基础" class="headerlink" title="let 基础"></a>let 基础</h3><blockquote>
+<ol>
+<li>可以多变量声明</li>
+</ol>
+</blockquote>
+<pre><code>    let a;
+    let b,c,d;
+    let e = 100;
+    let f =501,g = &#39;loveyou&#39;,h = [];</code></pre>
+<blockquote>
+<ol start="2">
+<li>变量不能重复声明</li>
+</ol>
+</blockquote>
+<pre><code>    let str = &#39;I love you&#39;;
+    let str = &#39;小猪&#39;</code></pre>
+<blockquote>
+<ol start="3">
+<li>块级作用域</li>
+</ol>
+</blockquote>
+<pre><code>    &#123;
+        let ko = &#39;找不到我&#39;
+    &#125;
+    for
+    if
+    while 
+    console.log(ko);</code></pre>
+<blockquote>
+<ol start="4">
+<li>不存在变量提升</li>
+</ol>
+</blockquote>
+<pre><code>    console.log(song);
+    let song = &#39;达人&#39;</code></pre>
+<blockquote>
+<p>5.不影响作用域链</p>
+</blockquote>
+<pre><code>    &#123;
+        let school = &#39;硅谷&#39;
+        function fn() &#123;
+            console.log(school);
+        &#125;
+        fn()
+    &#125;</code></pre>
+<h3 id="let-练习"><a href="#let-练习" class="headerlink" title="let 练习"></a>let 练习</h3><pre><code>    &lt;html lang=&quot;en&quot;&gt;
+
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+        &lt;style&gt;
+            * &#123;
+                margin: 0;
+                padding: 0;
+            &#125;
+
+            .cont &#123;
+                width: 500px;
+                margin: 0 auto;
+            &#125;
+
+            .item &#123;
+                width: 120px;
+                height: 50px;
+                border: 1px solid yellowgreen;
+                float: left;
+                margin: 10px;
+            &#125;
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class=&quot;cont&quot;&gt;
+            &lt;h2&gt;点击切换颜色&lt;/h2&gt;
+            &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+
+    &lt;/html&gt;
+    &lt;script&gt;
+        // 获取div元素对象
+        let items = document.getElementsByClassName(&#39;item&#39;);
+
+        // 遍历并绑定事件
+        for (let index = 0; index &lt; items.length; index++) &#123;
+            items[index].onclick = function () &#123;
+                // 修改当前元素的背景颜色
+                items[index].style.background = &#39;pink&#39;;
+            &#125;
+        &#125;
+    &lt;/script&gt;</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Es6 语法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/12/Es6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-constc常量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/12/constc%E5%B8%B8%E9%87%8F/">Es6常量</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/12/constc%E5%B8%B8%E9%87%8F/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="const-常量-值不能修改的是常量"><a href="#const-常量-值不能修改的是常量" class="headerlink" title="const 常量 值不能修改的是常量"></a>const 常量 值不能修改的是常量</h2><pre><code>    const CDX = &#39;硅谷&#39;</code></pre>
+<h3 id="1-一定要初始值-必须给值"><a href="#1-一定要初始值-必须给值" class="headerlink" title="1. 一定要初始值 必须给值"></a>1. 一定要初始值 必须给值</h3><h3 id="2-一般常量使用大写"><a href="#2-一般常量使用大写" class="headerlink" title="2. 一般常量使用大写"></a>2. 一般常量使用大写</h3><h3 id="3-常量的值不能修改"><a href="#3-常量的值不能修改" class="headerlink" title="3. 常量的值不能修改"></a>3. 常量的值不能修改</h3><pre><code>    const CDX = &#39;硅谷&#39;
+    CDX = &#39;school01&#39;
+    // 不能修改</code></pre>
+<h3 id="4-块级作用域"><a href="#4-块级作用域" class="headerlink" title="4. 块级作用域"></a>4. 块级作用域</h3><pre><code>    &#123;
+        const DC = &#39;找不到我&#39;
+    &#125;
+    console.log(DC);</code></pre>
+<h3 id="5-对数组和对象的元素修改，不算对常量的修改，不会报错"><a href="#5-对数组和对象的元素修改，不算对常量的修改，不会报错" class="headerlink" title="5. 对数组和对象的元素修改，不算对常量的修改，不会报错"></a>5. 对数组和对象的元素修改，不算对常量的修改，不会报错</h3><pre><code>    const TEAM = [&#39;uzi&#39;,&#39;mlxg&#39;];
+    TEAM.push(&#39;mkl&#39;) // 地址没有发生改变 不会报错 对象也是如此</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Es6常量</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/12/constc%E5%B8%B8%E9%87%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-解构赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/12/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/">Es6解构赋值</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/12/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Es6-允许按照一定模式从数组和对象中提取值，对变量进行赋值-这被称为解构赋值"><a href="#Es6-允许按照一定模式从数组和对象中提取值，对变量进行赋值-这被称为解构赋值" class="headerlink" title="Es6 允许按照一定模式从数组和对象中提取值，对变量进行赋值 这被称为解构赋值"></a>Es6 允许按照一定模式从数组和对象中提取值，对变量进行赋值 这被称为解构赋值</h2><blockquote>
+<ol>
+<li>数组的结构</li>
+</ol>
+</blockquote>
+<pre><code>    const F4 = [&#39;小沈阳&#39;,&#39;刘能&#39;,&#39;赵四&#39;,&#39;宋小宝&#39;]
+    let [x,l,z,s] = F4;
+    console.log(x,l,z,s);</code></pre>
+<blockquote>
+<ol start="2">
+<li>对象的解构</li>
+</ol>
+</blockquote>
+<pre><code>    const ZHAO = &#123;
+    name:&#39;赵本山&#39;,
+    age:&#39;不详&#39;,
+    xiaopin : function () &#123; 
+        console.log(&#39;我可以演小品&#39;);
+        &#125;
+    &#125;
+    let &#123;name,age,xiaopin&#125; = ZHAO;
+    console.log(name,age,xiaopin);</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Es6解构赋值</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/12/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-对象简写" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/12/%E5%AF%B9%E8%B1%A1%E7%AE%80%E5%86%99/">Es6简写对象</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/12/%E5%AF%B9%E8%B1%A1%E7%AE%80%E5%86%99/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Es6-允许在大括号里面-直接写入变量和函数-作为对象的属性和方法-这样写更加简洁"><a href="#Es6-允许在大括号里面-直接写入变量和函数-作为对象的属性和方法-这样写更加简洁" class="headerlink" title="Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁"></a>Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁</h2><pre><code>    let name = &#39;硅谷&#39;
+    let chang = function () &#123; 
+        console.log(&#39;可以改变一切&#39;);
+        &#125;
+        const scloo = &#123;
+            name,
+            chang,
+            imp()&#123;
+                console.log(&#39;可以这样创建方法&#39;);
+            &#125;
+        &#125;
+        console.log(scloo);</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Es6简写对象</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/12/%E5%AF%B9%E8%B1%A1%E7%AE%80%E5%86%99/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-模板字符串" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/12/%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/">Es6模板字符串</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/12/%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Es6-模板字符串-“-“-‘-‘"><a href="#Es6-模板字符串-“-“-‘-‘" class="headerlink" title="Es6 模板字符串   “ “ ‘ ‘"></a>Es6 模板字符串 <code> </code> “ “ ‘ ‘</h2><blockquote>
+<ol>
+<li>声明</li>
+</ol>
+</blockquote>
+<pre><code>    let str = ` 我也是一个字符串 `
+    console.log(str, typeof str );</code></pre>
+<blockquote>
+<ol start="2">
+<li>内容中可以直接出现换行符</li>
+</ol>
+</blockquote>
+<pre><code>    let str = ` 
+                 &lt;ul&gt;
+                     &lt;li&gt;123&lt;/li&gt;
+                     &lt;li&gt;456&lt;/li&gt;
+                     &lt;li&gt;789&lt;/li&gt;
+                 &lt;/ul&gt; 
+
+                `</code></pre>
+<blockquote>
+<ol start="3">
+<li>变量拼接</li>
+</ol>
+</blockquote>
+<pre><code>    let lovest = &#39;xxxx&#39;
+    let I = &#39;或者是&#39;
+    let joint = ` $&#123;lovest&#125;是在者$&#123;I&#125; `</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Es6模板字符串</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/12/%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-WebPack-学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -409,6 +940,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">WebPack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Es6 语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Es6简写对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Es6常量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Es6模板字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Es6解构赋值</a>
               </li>
             
             <div class="clearfix"></div>
