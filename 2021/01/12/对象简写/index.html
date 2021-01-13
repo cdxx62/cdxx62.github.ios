@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://cdxx62.github.io">
   <title>Es6简写对象 | 记录点滴，前端开发，学习记录博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁    let name &#x3D; &#39;硅谷&#39;     let chang &#x3D; function () &amp;#123;          console.log(&#39;可以改变一切&#39;);         &amp;#125;         const scloo &#x3D; &amp;#123;">
+  <meta name="description" content="Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁1234567891011121314       let name &#x3D; &amp;#x27;硅谷&amp;#x27;let chang &#x3D; function () &amp;#123;     console.log(&amp;#x27;可以改变一切&amp;#x27;);    &amp;#125;    const scloo &#x3D; &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Es6简写对象">
 <meta property="og:url" content="https://cdxx62.github.io/2021/01/12/%E5%AF%B9%E8%B1%A1%E7%AE%80%E5%86%99/index.html">
 <meta property="og:site_name" content="记录点滴，前端开发，学习记录博客">
-<meta property="og:description" content="Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁    let name &#x3D; &#39;硅谷&#39;     let chang &#x3D; function () &amp;#123;          console.log(&#39;可以改变一切&#39;);         &amp;#125;         const scloo &#x3D; &amp;#123;">
+<meta property="og:description" content="Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁1234567891011121314       let name &#x3D; &amp;#x27;硅谷&amp;#x27;let chang &#x3D; function () &amp;#123;     console.log(&amp;#x27;可以改变一切&amp;#x27;);    &amp;#125;    const scloo &#x3D; &amp;#123;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-12T06:06:45.000Z">
-<meta property="article:modified_time" content="2021-01-12T07:37:11.087Z">
+<meta property="article:modified_time" content="2021-01-13T02:10:17.572Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Es6简写对象">
 <meta name="twitter:card" content="summary">
@@ -167,18 +167,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Es6-允许在大括号里面-直接写入变量和函数-作为对象的属性和方法-这样写更加简洁"><a href="#Es6-允许在大括号里面-直接写入变量和函数-作为对象的属性和方法-这样写更加简洁" class="headerlink" title="Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁"></a>Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁</h2><pre><code>    let name = &#39;硅谷&#39;
-    let chang = function () &#123; 
-        console.log(&#39;可以改变一切&#39;);
-        &#125;
-        const scloo = &#123;
-            name,
-            chang,
-            imp()&#123;
-                console.log(&#39;可以这样创建方法&#39;);
-            &#125;
-        &#125;
-        console.log(scloo);</code></pre>
+        <h2 id="Es6-允许在大括号里面-直接写入变量和函数-作为对象的属性和方法-这样写更加简洁"><a href="#Es6-允许在大括号里面-直接写入变量和函数-作为对象的属性和方法-这样写更加简洁" class="headerlink" title="Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁"></a>Es6 允许在大括号里面 直接写入变量和函数 作为对象的属性和方法 这样写更加简洁</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">       </span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;硅谷&#x27;</span></span><br><span class="line"><span class="keyword">let</span> chang = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;可以改变一切&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> scloo = &#123;</span><br><span class="line">        name,</span><br><span class="line">        chang,</span><br><span class="line">        <span class="function"><span class="title">imp</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;可以这样创建方法&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(scloo);</span><br></pre></td></tr></table></figure>
+
+
 
       
 
@@ -283,18 +274,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/12/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/01/12/constc%E5%B8%B8%E9%87%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Es6解构赋值
+          Es6常量
         
       </div>
     </a>
   
   
-    <a href="/2021/01/12/%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Es6模板字符串</div>
+    <a href="/2021/01/12/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Es6扩展运算符</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -425,6 +416,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Es6 语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">React 脚手架</a>
               </li>
              
@@ -433,7 +428,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Es6 语法</a>
+                <a href="javascript:void(0)" class="js-tag color1">Es6常量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -441,11 +436,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Es6常量</a>
+                <a href="javascript:void(0)" class="js-tag color4">Es6扩展运算符</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Es6模板字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Es6箭头函数</a>
               </li>
              
               <li class="article-tag-list-item">

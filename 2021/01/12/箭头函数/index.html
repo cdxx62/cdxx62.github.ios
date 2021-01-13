@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cdxx62.github.io">
-  <title>WebPack 学习 | 记录点滴，前端开发，学习记录博客</title>
+  <title>Es6箭头函数 | 记录点滴，前端开发，学习记录博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="WebPack 学习">
-<meta property="og:url" content="https://cdxx62.github.io/2021/01/12/WebPack-%E5%AD%A6%E4%B9%A0/index.html">
+  <meta name="description" content="Es6 允许使用箭头函数123456let fn &#x3D; (a,b) &#x3D;&gt;&amp;#123;return a +b;&amp;#125;let rse &#x3D; fn(5,10)console.log(rse);   this 是静态的， this始终指向函数声明时所在作用域下的 this值   123456function getName() &amp;#123;     console.log(this.name);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Es6箭头函数">
+<meta property="og:url" content="https://cdxx62.github.io/2021/01/12/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="记录点滴，前端开发，学习记录博客">
+<meta property="og:description" content="Es6 允许使用箭头函数123456let fn &#x3D; (a,b) &#x3D;&gt;&amp;#123;return a +b;&amp;#125;let rse &#x3D; fn(5,10)console.log(rse);   this 是静态的， this始终指向函数声明时所在作用域下的 this值   123456function getName() &amp;#123;     console.log(this.name);">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-12T03:14:02.000Z">
-<meta property="article:modified_time" content="2021-01-12T03:16:03.205Z">
+<meta property="article:published_time" content="2021-01-12T06:06:45.000Z">
+<meta property="article:modified_time" content="2021-01-13T07:35:08.046Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="WebPack">
+<meta property="article:tag" content="Es6箭头函数">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="记录点滴，前端开发，学习记录博客" type="application/atom+xml">
@@ -145,27 +147,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-WebPack-学习" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-箭头函数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      WebPack 学习
+      Es6箭头函数
     </h1>
   
 
         
-        <a href="/2021/01/12/WebPack-%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-01-12T03:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+        <a href="/2021/01/12/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="Es6-允许使用箭头函数"><a href="#Es6-允许使用箭头函数" class="headerlink" title="Es6 允许使用箭头函数"></a>Es6 允许使用箭头函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fn = <span class="function">(<span class="params">a,b</span>) =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> a +b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> rse = fn(<span class="number">5</span>,<span class="number">10</span>)</span><br><span class="line"><span class="built_in">console</span>.log(rse);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>this 是静态的， this始终指向函数声明时所在作用域下的 this值</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line"> &#125;</span><br><span class="line"><span class="keyword">let</span> getName2 = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>设置window对象的name属性</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.name = <span class="string">&#x27;硅谷&#x27;</span></span><br><span class="line"><span class="keyword">const</span> SCD = &#123;</span><br><span class="line">    name:<span class="string">&#x27;AJAX&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">直接调用</span><br><span class="line">getName()</span><br><span class="line">getName2()</span><br><span class="line">全部指向了 <span class="built_in">window</span>.name = <span class="string">&#x27;硅谷&#x27;</span></span><br><span class="line"></span><br><span class="line">call 方法调用</span><br><span class="line">getName.call(SCD)</span><br><span class="line">getName2.call(SCD)</span><br><span class="line"></span><br><span class="line">getName 指向 name:<span class="string">&#x27;AJAX&#x27;</span></span><br><span class="line">getName2 指向  <span class="built_in">window</span>.name = <span class="string">&#x27;硅谷&#x27;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="2">
+<li>不能作为构造函数实例对象</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> post = <span class="function">(<span class="params">name,age</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="keyword">let</span> me = <span class="keyword">new</span> post(<span class="string">&#x27;xiao&#x27;</span>,<span class="number">30</span>)</span><br><span class="line"><span class="built_in">console</span>.log(me);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="3">
+<li>不能使用 arguments 变量</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> fnx = <span class="function">()=&gt;</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line"> &#125;</span><br><span class="line">fnx(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="4">
+<li>箭头函数简写</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>省略小括号 当形参只有一个的时候</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> add = <span class="function"><span class="params">n</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n + n;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>    2. 省略花括号 当代码体只有一条语句时 此时 return 要省略掉 而且语句的执行结果就是函数的返回值</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> af = <span class="function"><span class="params">x</span> =&gt;</span>  x *x ;</span><br></pre></td></tr></table></figure>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><blockquote>
+<p>需求 1 . 点击div两秒后颜色变成粉色</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cont = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.cont&#x27;</span>)</span><br><span class="line"><span class="comment">// 绑定事件</span></span><br><span class="line">cont.addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="comment">// 保存this</span></span><br><span class="line">    <span class="comment">// let _this = this;</span></span><br><span class="line">    <span class="comment">// 定时器</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span> &#123; </span><br><span class="line">        <span class="comment">// 修改背景颜色</span></span><br><span class="line">        <span class="comment">// _this.style.background = &#x27;pink&#x27;</span></span><br><span class="line">        <span class="built_in">this</span>.style.background = <span class="string">&#x27;pink&#x27;</span></span><br><span class="line">     &#125;,<span class="number">2000</span>)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需求 2. 从数组中返回偶数的元素</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ARR = [<span class="number">1</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">25</span>]</span><br><span class="line"> <span class="comment">// 以前写法</span></span><br><span class="line"><span class="comment">//  const NEW = ARR.filter(function (item) &#123; </span></span><br><span class="line"><span class="comment">//     if (item % 2 === 0) &#123;</span></span><br><span class="line"><span class="comment">//         return true</span></span><br><span class="line"><span class="comment">//     &#125;else &#123;</span></span><br><span class="line"><span class="comment">//         return false</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//   &#125;)</span></span><br><span class="line"><span class="comment">//   console.log(NEW);</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Es6 写法</span></span><br><span class="line">  <span class="keyword">const</span> TO = ARR.filter(<span class="function"><span class="params">item</span> =&gt;</span> item % <span class="number">2</span> === <span class="number">0</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(TO);</span><br><span class="line"></span><br><span class="line">  箭头函数适合与 <span class="built_in">this</span> 无关的回调。定时器，数组的方法回调</span><br><span class="line">  箭头函数不适合与 <span class="built_in">this</span> 有关的。事件函数的回调，对象的方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="ES6-允许给函数参数赋初始值"><a href="#ES6-允许给函数参数赋初始值" class="headerlink" title="ES6 允许给函数参数赋初始值"></a>ES6 允许给函数参数赋初始值</h2><blockquote>
+<ol>
+<li>形参初始值 其有默认值的参数一般都靠后</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b,c=<span class="number">10</span></span>) </span>&#123; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> fa = add(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">console</span>.log(fa);  </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.与结构赋值结合</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">connect</span>(<span class="params">&#123;name,age, usename, password, port&#125;</span>) </span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log(name,age,usename,password,port);</span><br><span class="line"> &#125;</span><br><span class="line"> connect(&#123;</span><br><span class="line">     name:<span class="string">&#x27;las&#x27;</span>,</span><br><span class="line">     age:<span class="number">660</span>,</span><br><span class="line">     usename:<span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">     password:<span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">     port:<span class="number">3000</span></span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -199,7 +249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">WebPack</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Es6箭头函数</a>
         		</li>
       		
 		</ul>
@@ -255,7 +305,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cdxx62.github.io/2021/01/12/WebPack-%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cdxx62.github.io/2021/01/12/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,18 +319,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/12/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/01/12/%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Es6解构赋值
+          Es6模板字符串
         
       </div>
     </a>
   
   
-    <a href="/2021/01/12/React%E5%BA%94%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">React应用</div>
+    <a href="/2021/01/12/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Es6解构赋值</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -307,7 +357,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Es6-%E5%85%81%E8%AE%B8%E4%BD%BF%E7%94%A8%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">Es6 允许使用箭头函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-number">2.</span> <span class="toc-text">练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6-%E5%85%81%E8%AE%B8%E7%BB%99%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%B5%8B%E5%88%9D%E5%A7%8B%E5%80%BC"><span class="toc-number">3.</span> <span class="toc-text">ES6 允许给函数参数赋初始值</span></a></li></ol>
                     </div>
                 </span>
             </div>

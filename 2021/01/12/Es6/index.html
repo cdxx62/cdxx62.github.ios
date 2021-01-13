@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://cdxx62.github.io">
   <title>Es6 | 记录点滴，前端开发，学习记录博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="let 变量let 基础  可以多变量声明       let a;     let b,c,d;     let e &#x3D; 100;     let f &#x3D;501,g &#x3D; &#39;loveyou&#39;,h &#x3D; [];   变量不能重复声明       let str &#x3D; &#39;I love you&#39;;     let str &#x3D; &#39;小猪&#39;   块级作用域">
+  <meta name="description" content="let 变量let 基础  可以多变量声明   1234let a;let b,c,d;let e &#x3D; 100;let f &#x3D;501,g &#x3D; &amp;#x27;loveyou&amp;#x27;,h &#x3D; [];   变量不能重复声明   12let str &#x3D; &amp;#x27;I love you&amp;#x27;;let str &#x3D; &amp;#x27;小猪&amp;#x27;   块级作用域   1234567&amp;#123;    l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Es6">
 <meta property="og:url" content="https://cdxx62.github.io/2021/01/12/Es6/index.html">
 <meta property="og:site_name" content="记录点滴，前端开发，学习记录博客">
-<meta property="og:description" content="let 变量let 基础  可以多变量声明       let a;     let b,c,d;     let e &#x3D; 100;     let f &#x3D;501,g &#x3D; &#39;loveyou&#39;,h &#x3D; [];   变量不能重复声明       let str &#x3D; &#39;I love you&#39;;     let str &#x3D; &#39;小猪&#39;   块级作用域">
+<meta property="og:description" content="let 变量let 基础  可以多变量声明   1234let a;let b,c,d;let e &#x3D; 100;let f &#x3D;501,g &#x3D; &amp;#x27;loveyou&amp;#x27;,h &#x3D; [];   变量不能重复声明   12let str &#x3D; &amp;#x27;I love you&amp;#x27;;let str &#x3D; &amp;#x27;小猪&amp;#x27;   块级作用域   1234567&amp;#123;    l">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-12T06:06:45.000Z">
-<meta property="article:modified_time" content="2021-01-12T06:39:08.319Z">
+<meta property="article:modified_time" content="2021-01-13T02:12:20.326Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Es6 语法">
 <meta name="twitter:card" content="summary">
@@ -172,95 +172,30 @@
 <li>可以多变量声明</li>
 </ol>
 </blockquote>
-<pre><code>    let a;
-    let b,c,d;
-    let e = 100;
-    let f =501,g = &#39;loveyou&#39;,h = [];</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d;</span><br><span class="line"><span class="keyword">let</span> e = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> f =<span class="number">501</span>,g = <span class="string">&#x27;loveyou&#x27;</span>,h = [];</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ol start="2">
 <li>变量不能重复声明</li>
 </ol>
 </blockquote>
-<pre><code>    let str = &#39;I love you&#39;;
-    let str = &#39;小猪&#39;</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;I love you&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;小猪&#x27;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ol start="3">
 <li>块级作用域</li>
 </ol>
 </blockquote>
-<pre><code>    &#123;
-        let ko = &#39;找不到我&#39;
-    &#125;
-    for
-    if
-    while 
-    console.log(ko);</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> ko = <span class="string">&#x27;找不到我&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span></span><br><span class="line"><span class="keyword">if</span></span><br><span class="line"><span class="keyword">while</span> </span><br><span class="line"><span class="built_in">console</span>.log(ko);</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ol start="4">
 <li>不存在变量提升</li>
 </ol>
 </blockquote>
-<pre><code>    console.log(song);
-    let song = &#39;达人&#39;</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(song);</span><br><span class="line"><span class="keyword">let</span> song = <span class="string">&#x27;达人&#x27;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>5.不影响作用域链</p>
 </blockquote>
-<pre><code>    &#123;
-        let school = &#39;硅谷&#39;
-        function fn() &#123;
-            console.log(school);
-        &#125;
-        fn()
-    &#125;</code></pre>
-<h3 id="let-练习"><a href="#let-练习" class="headerlink" title="let 练习"></a>let 练习</h3><pre><code>    &lt;html lang=&quot;en&quot;&gt;
-
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-        &lt;style&gt;
-            * &#123;
-                margin: 0;
-                padding: 0;
-            &#125;
-
-            .cont &#123;
-                width: 500px;
-                margin: 0 auto;
-            &#125;
-
-            .item &#123;
-                width: 120px;
-                height: 50px;
-                border: 1px solid yellowgreen;
-                float: left;
-                margin: 10px;
-            &#125;
-        &lt;/style&gt;
-    &lt;/head&gt;
-
-    &lt;body&gt;
-        &lt;div class=&quot;cont&quot;&gt;
-            &lt;h2&gt;点击切换颜色&lt;/h2&gt;
-            &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/body&gt;
-
-    &lt;/html&gt;
-    &lt;script&gt;
-        // 获取div元素对象
-        let items = document.getElementsByClassName(&#39;item&#39;);
-
-        // 遍历并绑定事件
-        for (let index = 0; index &lt; items.length; index++) &#123;
-            items[index].onclick = function () &#123;
-                // 修改当前元素的背景颜色
-                items[index].style.background = &#39;pink&#39;;
-            &#125;
-        &#125;
-    &lt;/script&gt;</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> school = <span class="string">&#x27;硅谷&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(school);</span><br><span class="line">    &#125;</span><br><span class="line">    fn()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="let-练习"><a href="#let-练习" class="headerlink" title="let 练习"></a>let 练习</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: <span class="number">0</span>;</span><br><span class="line">            padding: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .cont &#123;</span><br><span class="line">            width: 500px;</span><br><span class="line">            margin: <span class="number">0</span> auto;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .item &#123;</span><br><span class="line">            width: 120px;</span><br><span class="line">            height: 50px;</span><br><span class="line">            border: 1px solid yellowgreen;</span><br><span class="line">            float: left;</span><br><span class="line">            margin: 10px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;cont&quot;</span>&gt;</span><br><span class="line">        &lt;h2&gt;点击切换颜色&lt;/h2&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;item&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;item&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;item&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// 获取div元素对象</span></span><br><span class="line">    <span class="keyword">let</span> items = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;item&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历并绑定事件</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; items.length; index++) &#123;</span><br><span class="line">        items[index].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// 修改当前元素的背景颜色</span></span><br><span class="line">            items[index].style.background = <span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -498,6 +433,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Es6 语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">React 脚手架</a>
               </li>
              
@@ -506,7 +445,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Es6 语法</a>
+                <a href="javascript:void(0)" class="js-tag color1">Es6常量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,11 +453,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Es6常量</a>
+                <a href="javascript:void(0)" class="js-tag color4">Es6扩展运算符</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Es6模板字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Es6箭头函数</a>
               </li>
              
               <li class="article-tag-list-item">
