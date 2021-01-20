@@ -1073,27 +1073,36 @@ location  history</code></pre>
 
 
   
-    <article id="post-WebPack-学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-React学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/12/WebPack-%E5%AD%A6%E4%B9%A0/">WebPack 学习</a>
+      <a class="article-title" href="/2021/01/12/React%E5%AD%A6%E4%B9%A0/">React学习</a>
     </h1>
   
 
         
-        <a href="/2021/01/12/WebPack-%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-01-12T03:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+        <a href="/2021/01/12/React%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="为什么不用原始的js-要用jsx语法？"><a href="#为什么不用原始的js-要用jsx语法？" class="headerlink" title="为什么不用原始的js 要用jsx语法？"></a>为什么不用原始的js 要用jsx语法？</h2><pre><code>        之前原始 js 创建虚拟DOM太繁琐 jsx可以让让编码人员简单的创建虚拟DOM
+        jsx 语法的写法 就是原始 js 写法的语法糖（简写方式）</code></pre>
+<h2 id="我们创建的虚拟DOM-到底是个什么？"><a href="#我们创建的虚拟DOM-到底是个什么？" class="headerlink" title="我们创建的虚拟DOM 到底是个什么？"></a>我们创建的虚拟DOM 到底是个什么？</h2><pre><code>        本质是 Object 对象
+        判断虚拟DOM 是否为一般对象 返回 t 或 f
+        console.log(VDOM instanceof Object);
+        虚拟DOM比较轻
+        真实DOM比较重
+        因为虚拟DOM 是react 内部在用 无需真实DOM上面的那么多属性
+        虚拟DOM会被react 转换为真实DOM 呈现在页面上</code></pre>
+
       
 
       
@@ -1106,7 +1115,7 @@ location  history</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">WebPack</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">React学习</a>
         		</li>
       		
 		</ul>
@@ -1116,7 +1125,7 @@ location  history</code></pre>
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/12/WebPack-%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/01/12/React%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
         </p>
       
 
@@ -1146,55 +1155,28 @@ location  history</code></pre>
 
 
   
-    <article id="post-React应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-React_jsx学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/12/React%E5%BA%94%E7%94%A8/">React应用</a>
+      <a class="article-title" href="/2021/01/12/React_jsx%E5%AD%A6%E4%B9%A0/">React_jsx学习</a>
     </h1>
   
 
         
-        <a href="/2021/01/12/React%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-01-12T03:01:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+        <a href="/2021/01/12/React_jsx%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2021-01-12T06:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="React-脚手架"><a href="#React-脚手架" class="headerlink" title="React 脚手架"></a>React 脚手架</h2><h3 id="1-xxx脚手架：用来帮助程序员快速创建一个基于xxx库的模板项目"><a href="#1-xxx脚手架：用来帮助程序员快速创建一个基于xxx库的模板项目" class="headerlink" title="1. xxx脚手架：用来帮助程序员快速创建一个基于xxx库的模板项目"></a>1. xxx脚手架：用来帮助程序员快速创建一个基于xxx库的模板项目</h3><pre><code>1.包含所有的配置（语法检查，jsx编译，devServer…）
-2.下载好了所有的相关依赖
-3.可以直接运行一个简单的效果</code></pre>
-<blockquote>
-<p>2 .react提供了一个创建与react项目脚手架库：create-react-app</p>
-</blockquote>
-<blockquote>
-<p>3 .项目的整体技术架构为：react+wbpack+es6+eslint</p>
-</blockquote>
-<blockquote>
-<p>4 .使用脚手架开发项目的特点：模块化，组件化，工程化</p>
-</blockquote>
-<hr>
-<h2 id="创建项目并启动"><a href="#创建项目并启动" class="headerlink" title="创建项目并启动"></a>创建项目并启动</h2><blockquote>
-<p>第一步：全局安装</p>
-</blockquote>
-<pre><code>npm install-g creat-react-app</code></pre>
-<blockquote>
-<p>第二步：切换到想创建项目目录，使用命令</p>
-</blockquote>
-<pre><code>creat-react-app my-app</code></pre>
-<blockquote>
-<p>第三步：进入项目文件夹</p>
-</blockquote>
-<pre><code>cd my-app</code></pre>
-<blockquote>
-<p>第四步启动项目</p>
-</blockquote>
-<pre><code>npm start</code></pre>
+        <h2 id="jsx-语法规则"><a href="#jsx-语法规则" class="headerlink" title="jsx 语法规则"></a>jsx 语法规则</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/babel&quot;</span>&gt;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        jsx 语法规则</span></span><br><span class="line"><span class="comment">            jsx全程 JavaScript XML 是react定义的一种类似与XML的js扩展语法：js+XML</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            1. 定义虚拟DOM时不要写引号。</span></span><br><span class="line"><span class="comment">            2. 标签中混入js表达式时要混入花括号 &#123;&#125;</span></span><br><span class="line"><span class="comment">            3. 样式的类名指令 不能用 class 要用 className 因为 class 是Es6 的关键字</span></span><br><span class="line"><span class="comment">            4. 内联样式 要用style=&#123;&#123;key：value&#125;&#125;的形式去写</span></span><br><span class="line"><span class="comment">            5. 虚拟DOM只能有一个根标签</span></span><br><span class="line"><span class="comment">            6. 标签必须闭合</span></span><br><span class="line"><span class="comment">            7. 标签首字母</span></span><br><span class="line"><span class="comment">                1. 小写字母开头 则将该标签转为 html 中同名元素 无 同名元素则报错</span></span><br><span class="line"><span class="comment">                2. 如果大写字母开头 react 就去渲染对应的组件 如果没有定义组件 则报错</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        一定区分：【js语句（代码）】与【js表达式】</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            1. 一个表达式会产生一个值，可以放在任何一个需要值的地方</span></span><br><span class="line"><span class="comment">                1. 变量名 a</span></span><br><span class="line"><span class="comment">                2. a+b</span></span><br><span class="line"><span class="comment">                3. 函数调用表达式dem（1）；</span></span><br><span class="line"><span class="comment">                4. arr.map()</span></span><br><span class="line"><span class="comment">                5. function text()&#123;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            2. 语句 代码</span></span><br><span class="line"><span class="comment">                1. if()&#123;&#125;</span></span><br><span class="line"><span class="comment">                2. for()&#123;&#125;</span></span><br><span class="line"><span class="comment">                3. switch()&#123;case:xxx&#125;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">const</span> myTEX = <span class="string">&quot;textmy&quot;</span>;</span><br><span class="line">   <span class="keyword">const</span> myDATA = <span class="string">&quot;hello react&quot;</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment">// 创建虚拟DOM</span></span><br><span class="line">    <span class="keyword">const</span> VDOM = (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;h2 className = <span class="string">&quot;tit&quot;</span> id = &#123;myTEX&#125;&gt;</span><br><span class="line">                &lt;span style = &#123;&#123;<span class="attr">color</span>:<span class="string">&#x27;red&#x27;</span>,<span class="attr">fontSize</span>:<span class="string">&#x27;30px&#x27;</span>&#125;&#125;&gt;&#123;myDATA&#125;&lt;/span&gt;    </span><br><span class="line">            &lt;/h2&gt;</span><br><span class="line">            &lt;input type=<span class="string">&quot;text&quot;</span>/&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">    <span class="comment">// 虚拟DOM渲染到页面    </span></span><br><span class="line">   ReactDOM.render(VDOM,<span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>))</span><br><span class="line">   </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="jsx-语法小练习"><a href="#jsx-语法小练习" class="headerlink" title="jsx 语法小练习"></a>jsx 语法小练习</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 模拟数据</span></span><br><span class="line"><span class="comment">// 给react数组会帮你遍历 对象不能</span></span><br><span class="line"><span class="keyword">const</span> DATA = [<span class="string">&#x27;Angular&#x27;</span>,<span class="string">&#x27;React&#x27;</span>, <span class="string">&#x27;Vue&#x27;</span>,]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建虚拟DOM</span></span><br><span class="line"> <span class="keyword">const</span> VDOM = (</span><br><span class="line">     &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;前端js框架列表&lt;/h1&gt; </span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">             &#123;</span><br><span class="line">                 DATA.map(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">                     <span class="comment">// 必须要有一个唯一值 key</span></span><br><span class="line">                     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>= <span class="string">&#123;index&#125;</span>&gt;</span>&#123;item&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">                 &#125;)</span><br><span class="line">             &#125;</span><br><span class="line">         &lt;/ul&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line"> )</span><br><span class="line"> <span class="comment">// 虚拟DOM渲染到页面    </span></span><br><span class="line">ReactDOM.render(VDOM,<span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>))</span><br></pre></td></tr></table></figure>
 
       
 
@@ -1208,7 +1190,7 @@ location  history</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">React 脚手架</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">React_jsx学习</a>
         		</li>
       		
 		</ul>
@@ -1218,7 +1200,7 @@ location  history</code></pre>
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/12/React%E5%BA%94%E7%94%A8/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/01/12/React_jsx%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
         </p>
       
 
@@ -1248,6 +1230,10 @@ location  history</code></pre>
 
 
   
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1378,6 +1364,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">js特点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">React学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">React_jsx学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hello_react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">js创建对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">js构造函数</a>
               </li>
             
             <div class="clearfix"></div>
